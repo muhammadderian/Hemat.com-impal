@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Budget"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="550dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="-30dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginRight="-90dp"
+        android:background="@drawable/gradient_bg">
+
+        <Button
+            android:id="@+id/backbtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="70dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+            android:onClick="back" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="73dp"
+            android:text="Adjust Your Balance Here"
+            android:textColor="#FFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="350dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="130dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Budget"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="60dp"
+                android:src="@drawable/bill" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:text="Rp."
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!--Input-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="120dp"
+            android:text="Input Budget"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="148dp"
+            android:text="Rp."
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/inputBudget"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="140dp"
+            android:inputType="number"
+            android:textColor="#43c4ae"
+            android:textStyle="bold" />
+
+        <!--Deskripsi-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="190dp"
+            android:text="Deskripsi"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputDesc"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="205dp"
+
+            android:textColor="#43c4ae"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="65dp"
+            android:entries="@array/select" />
+
+        <Button
+            android:id="@+id/inputBtn"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="12dp"
+
+            android:background="@drawable/mybutton"
+            android:text="input"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="500dp"
+        android:text="Input History"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="525dp"
+        android:gravity="center">
+        <ListView
+            android:id="@+id/listViewBudget"
+            android:layout_marginLeft="10sp"
+            android:layout_width="310dp"
+            android:layout_height="match_parent">
+        </ListView>
+    </LinearLayout>
+
+    <!--
+    <ListView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="0dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="390dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/money" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="weekly fee"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12/09/2018"
+                        android:textColor="@color/lightgray"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="45sp"
+                    android:text="Rp.50.000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </ListView>
+    -->
+</RelativeLayout>
